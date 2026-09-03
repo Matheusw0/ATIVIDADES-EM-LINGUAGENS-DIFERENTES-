@@ -1,0 +1,22 @@
+print("-"*10, 'CMI CALCULATOR!',"-"*10)
+while True:
+    w = float(input("\nINSERT YOUR WEIGHT IN KILOGRAMS OR 0 TO END: "))
+    if w == 0:
+        print("FINISHED.")
+        break
+    h = float(input("\nINSERT YOUR HEIGHT IN METERS OR 0 TO END: "))
+    if h == 0:
+        print("FINISHED.")
+        break
+
+    cmi = w / h**2
+
+    state = ['UNDER WEIGHT', 'NORMAL WEIGHT', 'OVERWEIGHT', 'OBESE']
+    if cmi <  18.5:
+        print(f"\nYOUR CMI IS {cmi:.4f} AND YOU ARE {state[0]}.")
+    elif cmi >18.5 and cmi < 24.9:
+        print(f"\nYOUR CMI IS {cmi:.4f} AND YOU ARE {state[1]}.")
+    elif cmi > 25.0 and cmi < 29.9:
+        print(f"\nYOUR CMI IS {cmi:.4f} AND YOU ARE {state[2]}.")
+    elif cmi > 30.0:
+        print(f"\nYOUR CMI IS {cmi:.4f} AND YOU ARE {state[3]}.")
